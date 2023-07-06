@@ -66,8 +66,9 @@ size = Vector2(85.5, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlk4f"]
 size = Vector2(53, 17)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojblc"]
-size = Vector2(78, 20)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8ej3r"]
+a = Vector2(61, 0)
+b = Vector2(-39, -1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -252,7 +253,7 @@ texture = ExtResource("5_7y7c5")
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="plataformas"]
 editor_description = "A vece pareciera que no hay forma de volver, sin embargo, la hay. se puede volver tambien con la plataforma donde estan las xs pero dificilmente caera justo ahi el salto"
 position = Vector2(333, 104)
-shape = SubResource("RectangleShape2D_ojblc")
+shape = SubResource("SegmentShape2D_8ej3r")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 anchors_preset = 8
@@ -281,10 +282,10 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "  †"
 
 [node name="seminknuc" parent="." instance=ExtResource("6_6h4dp")]
-position = Vector2(261, 78)
+position = Vector2(261, 70)
 
 [node name="seminknuc2" parent="." instance=ExtResource("6_6h4dp")]
-position = Vector2(509, 125)
+position = Vector2(510, 116)
 
 [node name="Mar" parent="." instance=ExtResource("4_6myt8")]
 position = Vector2(303, 505)
@@ -304,5 +305,3 @@ scale = Vector2(0.1, 0.1)
 [node name="Cosa censurada4" parent="." instance=ExtResource("6_787qh")]
 position = Vector2(402, 578)
 scale = Vector2(0.1, 0.1)
-
-[connection signal="body_entered" from="seminknuc" to="Mar" method="_on_seminknuc_body_entered"]

@@ -10,11 +10,12 @@ size = Vector2(34, 28)
 script = ExtResource("1_ewvka")
 metadata/_edit_group_ = true
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4ytex")
+
 [node name="Sueño" type="Sprite2D" parent="."]
 scale = Vector2(0.047, 0.051)
 texture = ExtResource("1_ggyud")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_4ytex")
+metadata/_edit_group_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
