@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b42wbkj7yjv6h"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_5yvn5"]
+[ext_resource type="Texture2D" uid="uid://xqjd0e3fbspn" path="res://Mar.PNG" id="2_v5x72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l748m"]
+size = Vector2(38, 51)
+
+[node name="Mar" type="CharacterBody2D"]
+script = ExtResource("1_5yvn5")
+metadata/_edit_group_ = true
+
+[node name="Mar" type="Sprite2D" parent="."]
+scale = Vector2(0.0190095, 0.0392006)
+texture = ExtResource("2_v5x72")
+
+[node name="Mar2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l748m")

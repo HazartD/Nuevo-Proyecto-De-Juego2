@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://d4mt25m5nmew6"]
+
+[ext_resource type="Script" path="res://cosa_que_daña_censurada.gd" id="1_5m02d"]
+[ext_resource type="Texture2D" uid="uid://uuk4wp1xmsq7" path="res://Censura.png" id="1_lt4wb"]
+[ext_resource type="AudioStream" uid="uid://bcfk3iubibtd5" path="res://versandi_ara_ara.mp3" id="3_a0tbi"]
+
+[sub_resource type="Animation" id="Animation_0qhxn"]
+resource_name = "Girodañaino"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_3q8li"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4vw2v"]
+_data = {
+"Girodañaino": SubResource("Animation_0qhxn"),
+"RESET": SubResource("Animation_3q8li")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_veuwm"]
+radius = 184.391
+
+[node name="Cosa censurada" type="Area2D"]
+script = ExtResource("1_5m02d")
+
+[node name="giro" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CollisionShape2D")
+autoplay = "Girodañaino"
+libraries = {
+"": SubResource("AnimationLibrary_4vw2v")
+}
+
+[node name="Censura" type="Sprite2D" parent="."]
+texture = ExtResource("1_lt4wb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_veuwm")
+
+[node name="ara" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_a0tbi")
+mix_target = 1
+bus = &"araara"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
