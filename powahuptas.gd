@@ -1,5 +1,5 @@
 extends Node
-var powahuptas = ["seminknuc"]
+var powahuptas = ["tegoelpoderabsolutoymelapelas"]
 var CRUZ : int
 var XXX: int
 var matacionesasesinas:int
