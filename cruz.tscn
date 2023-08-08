@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvxmxtul1xosb"]
+
+[ext_resource type="Script" path="res://cruz.gd" id="1_m8kjv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oo2sa"]
+size = Vector2(21, 39.5)
+
+[node name="Cruz" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_m8kjv")
+metadata/_edit_group_ = true
+
+[node name="aqui" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.25)
+shape = SubResource("RectangleShape2D_oo2sa")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = -36.0
+offset_right = 15.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+text = "†"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

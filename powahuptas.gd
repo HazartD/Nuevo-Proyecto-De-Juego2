@@ -1,2 +1,6 @@
 extends Node
-var powahuptas = []
+var powahuptas = ["seminknuc"]
+var CRUZ : int
+var XXX: int
+var matacionesasesinas:int
+var babosadas:int

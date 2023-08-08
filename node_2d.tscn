@@ -1,21 +1,22 @@
-[gd_scene load_steps=27 format=3 uid="uid://cuimv80je2vsn"]
+[gd_scene load_steps=33 format=3 uid="uid://cuimv80je2vsn"]
 
 [ext_resource type="Texture2D" uid="uid://eyeuvdi20cnj" path="res://FJCGdDKWQAUGi1D.jpg" id="3_eb53c"]
 [ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="4_6myt8"]
 [ext_resource type="Texture2D" uid="uid://cnkh5x40lovnn" path="res://digital_hazard.PNG" id="4_n54do"]
 [ext_resource type="Texture2D" uid="uid://bogigiudu387i" path="res://69.jpg" id="5_7y7c5"]
+[ext_resource type="Script" path="res://Seminknuc.gd" id="5_gsrrs"]
 [ext_resource type="PackedScene" uid="uid://ciucw8f0su2v2" path="res://seminknuc.tscn" id="6_6h4dp"]
 [ext_resource type="PackedScene" uid="uid://d4mt25m5nmew6" path="res://cosa_que_daña_censurada.tscn" id="6_787qh"]
+[ext_resource type="PackedScene" uid="uid://cvxmxtul1xosb" path="res://cruz.tscn" id="7_apev2"]
+[ext_resource type="PackedScene" uid="uid://cfi02ny6klhe4" path="res://xxx.tscn" id="8_mmlmd"]
+[ext_resource type="Script" path="res://salida_alnivel2.gd" id="9_vfonr"]
+[ext_resource type="PackedScene" uid="uid://bkk8bhfh0gp62" path="res://enemaigo.tscn" id="10_1gxfq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c76xd"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0erp2"]
 a = Vector2(-1, -204)
 b = Vector2(0, 237)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ichtj"]
-a = Vector2(-21, 1)
-b = Vector2(372, 1)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_juxmp"]
 a = Vector2(1, -38)
@@ -30,11 +31,11 @@ size = Vector2(58, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhlvh"]
 size = Vector2(28, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_plovf"]
-size = Vector2(36, 12)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8be3v"]
 size = Vector2(189, 176.191)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plovf"]
+size = Vector2(36, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rw043"]
 size = Vector2(18, 10)
@@ -46,7 +47,7 @@ size = Vector2(21, 14)
 size = Vector2(54, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is805"]
-size = Vector2(101, 32)
+size = Vector2(102, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk2xk"]
 size = Vector2(86, 10)
@@ -64,16 +65,25 @@ size = Vector2(85.5, 24)
 size = Vector2(53, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nohvd"]
-size = Vector2(108, 8)
+size = Vector2(64, 48)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8ej3r"]
 a = Vector2(61, 0)
 b = Vector2(-39, -1)
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eri7o"]
+size = Vector2(20, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdie"]
+size = Vector2(90, 35)
+
+[node name="Nivel1" type="Node2D"]
+script = ExtResource("9_vfonr")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+z_index = -2
 position = Vector2(2, 3)
+collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_c76xd")
 metadata/_edit_group_ = true
 
@@ -82,14 +92,10 @@ position = Vector2(302.125, 299.656)
 scale = Vector2(0.73989, 0.731235)
 texture = ExtResource("3_eb53c")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-position = Vector2(215, 317)
-polygon = PackedVector2Array(389, -63, 331.349, -61.5106, 283, -26, 210, 52, 183, 108, 184, 147, 218, 211, 285, 278, 390, 281)
-
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
 position = Vector2(381, 659)
 rotation = 3.14159
-polygon = PackedVector2Array(380, 61.001, 250, 61.0006, 179, 186, 181.999, 256, 212.999, 303.001, 262.999, 356.001, 317.16, 402.19, 380.999, 402.001)
+polygon = PackedVector2Array(381, 30.001, -227, 38.9995, -223.001, 398.999, -165.001, 402, -104.001, 355, -42.0007, 291, -18.0006, 234, -29.0004, 163, -124, 60.9997, 248, 61.0006, 179, 186, 181.999, 256, 211.999, 303.001, 262.999, 356.001, 317.16, 402.19, 380.999, 402.001)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D2"]
 position = Vector2(205, 272)
@@ -103,16 +109,12 @@ shape = SubResource("SegmentShape2D_0erp2")
 position = Vector2(-1, 20)
 shape = SubResource("SegmentShape2D_0erp2")
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(132, 598)
-shape = SubResource("SegmentShape2D_ichtj")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(290, 1)
 shape = SubResource("SegmentShape2D_juxmp")
 
 [node name="plataformas" type="StaticBody2D" parent="."]
-metadata/_edit_group_ = true
+collision_mask = 0
 
 [node name="DigitalHazard6" type="Sprite2D" parent="plataformas"]
 position = Vector2(161, 359)
@@ -165,8 +167,8 @@ scale = Vector2(0.0978832, 0.0697671)
 texture = ExtResource("5_7y7c5")
 
 [node name="76" type="Sprite2D" parent="plataformas"]
-position = Vector2(293.75, 560.125)
-scale = Vector2(0.287037, 0.0450579)
+position = Vector2(296, 562.125)
+scale = Vector2(0.169312, 0.068314)
 texture = ExtResource("5_7y7c5")
 
 [node name="DigitalHazard10" type="Sprite2D" parent="plataformas"]
@@ -201,14 +203,14 @@ shape = SubResource("RectangleShape2D_4mmer")
 position = Vector2(207, 426)
 shape = SubResource("RectangleShape2D_nhlvh")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="plataformas"]
-position = Vector2(391, 426)
-shape = SubResource("RectangleShape2D_plovf")
-
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="plataformas"]
 position = Vector2(161, 359)
 scale = Vector2(0.174603, 0.0567568)
 shape = SubResource("RectangleShape2D_8be3v")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="plataformas"]
+position = Vector2(391, 426)
+shape = SubResource("RectangleShape2D_plovf")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="plataformas"]
 position = Vector2(435, 359)
@@ -223,7 +225,7 @@ position = Vector2(259, 243.5)
 shape = SubResource("RectangleShape2D_r3td1")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="plataformas"]
-position = Vector2(345.5, 208)
+position = Vector2(345, 207.5)
 shape = SubResource("RectangleShape2D_is805")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="plataformas"]
@@ -247,7 +249,7 @@ position = Vector2(573.5, 90)
 shape = SubResource("RectangleShape2D_jlk4f")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="plataformas"]
-position = Vector2(294, 560)
+position = Vector2(296, 576)
 shape = SubResource("RectangleShape2D_nohvd")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="plataformas"]
@@ -257,9 +259,11 @@ shape = SubResource("SegmentShape2D_8ej3r")
 
 [node name="seminknuc" parent="." instance=ExtResource("6_6h4dp")]
 position = Vector2(260, 70)
+script = ExtResource("5_gsrrs")
 
 [node name="seminknuc2" parent="." instance=ExtResource("6_6h4dp")]
 position = Vector2(510, 117)
+script = ExtResource("5_gsrrs")
 
 [node name="Mar" parent="." instance=ExtResource("4_6myt8")]
 position = Vector2(303, 505)
@@ -280,27 +284,30 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(402, 578)
 scale = Vector2(0.1, 0.1)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 603.0
-offset_bottom = 83.0
+[node name="Cruz" parent="." instance=ExtResource("7_apev2")]
+position = Vector2(14, 43)
 
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 28.0
-offset_right = 52.0
-offset_bottom = 54.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "†"
-metadata/_edit_group_ = true
+[node name="salida_cruz" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="Label2" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 568.0
-offset_top = 52.0
-offset_right = 608.0
-offset_bottom = 78.0
-theme_override_colors/font_color = Color(0.941176, 0, 0, 1)
-text = "XXX"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="salida_cruz"]
+position = Vector2(14, 43)
+shape = SubResource("RectangleShape2D_eri7o")
+
+[node name="Xxx" parent="." instance=ExtResource("8_mmlmd")]
+position = Vector2(522, 31)
+
+[node name="salida_xxx" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="salida_xxx"]
+position = Vector2(554, 55.5)
+shape = SubResource("RectangleShape2D_cpdie")
+
+[node name="enemaigo" parent="." instance=ExtResource("10_1gxfq")]
+position = Vector2(456, 296)
+
+[connection signal="body_entered" from="salida_cruz" to="." method="_on_salida_cruz_body_entered"]
+[connection signal="body_entered" from="salida_xxx" to="." method="_on_salida_xxx_body_entered"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://imbo5i8o0c4b"]
+
+[ext_resource type="AudioStream" uid="uid://bxvvkdqsbat7c" path="res://Fire_Frontier.mp3" id="1_6d000"]
+[ext_resource type="Script" path="res://bacsond.gd" id="2_r52hg"]
+
+[node name="bacsond" type="AudioStreamPlayer"]
+stream = ExtResource("1_6d000")
+volume_db = -20.048
+bus = &"back"
+script = ExtResource("2_r52hg")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

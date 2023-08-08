@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyel2hi2pmyid"]
+
+[ext_resource type="Script" path="res://nosirvopanada.gd" id="1_8g6sa"]
+[ext_resource type="Texture2D" uid="uid://yoti7ok5xsdu" path="res://aff50ee4bf7477f8e2c704bc1652cb99.png" id="2_s3tp8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ta6nh"]
+size = Vector2(100, 100)
+
+[node name="nofurula" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_8g6sa")
+
+[node name="Aff50Ee4Bf7477f8e2c704Bc1652Cb99" type="Sprite2D" parent="."]
+position = Vector2(-1.04904e-05, -1.90735e-06)
+scale = Vector2(0.096, 0.12)
+texture = ExtResource("2_s3tp8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ta6nh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

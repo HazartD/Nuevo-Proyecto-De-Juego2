@@ -1,18 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://b42wbkj7yjv6h"]
+[gd_scene load_steps=8 format=3 uid="uid://b42wbkj7yjv6h"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_5yvn5"]
 [ext_resource type="Texture2D" uid="uid://xqjd0e3fbspn" path="res://Mar.PNG" id="2_v5x72"]
+[ext_resource type="AudioStream" uid="uid://br3oc0qrrrlxg" path="res://Drash_-_Ahh_mi_ano2.mp3" id="3_oi5ub"]
+[ext_resource type="AudioStream" uid="uid://bfap3litglr84" path="res://Drash_-_Ahh_mi_ano1.mp3" id="3_qbkw0"]
+[ext_resource type="AudioStream" uid="uid://pd0ea8iebdau" path="res://Drash_-_Ahh_mi_ano3.mp3" id="5_rllpx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l748m"]
-size = Vector2(38, 51)
+size = Vector2(38, 52)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ujgv"]
+radius = 81.0062
 
 [node name="Mar" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 2
 script = ExtResource("1_5yvn5")
 metadata/_edit_group_ = true
 
 [node name="Mar" type="Sprite2D" parent="."]
-scale = Vector2(0.0190095, 0.0392006)
+scale = Vector2(0.019, 0.039)
 texture = ExtResource("2_v5x72")
 
-[node name="Mar2" type="CollisionShape2D" parent="."]
+[node name="MAr" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_l748m")
+
+[node name="salto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qbkw0")
+bus = &"Busmovimien"
+
+[node name="salto2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oi5ub")
+bus = &"Busmovimien"
+
+[node name="AyAybutnoyforme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rllpx")
+bus = &"Busmovimien"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3ujgv")
