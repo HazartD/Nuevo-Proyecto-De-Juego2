@@ -1,0 +1,212 @@
+[gd_scene load_steps=20 format=3 uid="uid://3pncnp62y4ox"]
+
+[ext_resource type="Texture2D" uid="uid://c6qhfn3mwjd4w" path="res://El_Salvador.png" id="1_8fjgk"]
+[ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="2_w33ud"]
+[ext_resource type="Texture2D" uid="uid://h03vp8gybspk" path="res://IMG_20210723_173330.jpg" id="2_wd07a"]
+[ext_resource type="PackedScene" uid="uid://bs6qyckd34kla" path="res://portal.tscn" id="4_27tkj"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hluhq"]
+a = Vector2(-224, 0)
+b = Vector2(1500, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_601gl"]
+a = Vector2(-224, 0)
+b = Vector2(-224, 982)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qhsnx"]
+a = Vector2(-224, 982)
+b = Vector2(1500, 982)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0x7ce"]
+a = Vector2(1500, 0)
+b = Vector2(1500, 982)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huhyq"]
+size = Vector2(133, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsgdm"]
+size = Vector2(238.75, 17.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtnf5"]
+size = Vector2(238.75, 17.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlj74"]
+size = Vector2(285, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4qbb"]
+size = Vector2(288.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku6cr"]
+size = Vector2(290, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gangp"]
+size = Vector2(290, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4v58"]
+size = Vector2(349, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57rbl"]
+size = Vector2(72.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m8rf"]
+size = Vector2(132, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tfrr"]
+size = Vector2(132, 14)
+
+[node name="diversificacion" type="Node2D"]
+
+[node name="fondo" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="ElSalvador" type="Sprite2D" parent="fondo"]
+position = Vector2(638, 491)
+texture = ExtResource("1_8fjgk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="fondo"]
+shape = SubResource("SegmentShape2D_hluhq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo"]
+shape = SubResource("SegmentShape2D_601gl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="fondo"]
+shape = SubResource("SegmentShape2D_qhsnx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="fondo"]
+shape = SubResource("SegmentShape2D_0x7ce")
+
+[node name="plata" type="StaticBody2D" parent="."]
+
+[node name="Img20210723173330" type="Sprite2D" parent="plata"]
+position = Vector2(-104, 181.5)
+scale = Vector2(0.176296, 0.0222513)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173331" type="Sprite2D" parent="plata"]
+position = Vector2(1384, 200.5)
+scale = Vector2(0.174815, 0.0222513)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173332" type="Sprite2D" parent="plata"]
+position = Vector2(170, 324)
+scale = Vector2(0.0977778, 0.0183246)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173333" type="Sprite2D" parent="plata"]
+position = Vector2(464.5, 446)
+scale = Vector2(0.211111, 0.026178)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173334" type="Sprite2D" parent="plata"]
+position = Vector2(824.5, 446)
+scale = Vector2(0.214074, 0.026178)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173335" type="Sprite2D" parent="plata"]
+position = Vector2(658.5, 741.5)
+scale = Vector2(0.258519, 0.0536649)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173336" type="Sprite2D" parent="plata"]
+position = Vector2(644, 600)
+scale = Vector2(0.0533334, 0.026178)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173337" type="Sprite2D" parent="plata"]
+position = Vector2(1147, 324)
+scale = Vector2(0.0977778, 0.0183246)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173338" type="Sprite2D" parent="plata"]
+position = Vector2(145, 832)
+scale = Vector2(0.214815, 0.026178)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173339" type="Sprite2D" parent="plata"]
+position = Vector2(1130.5, 833)
+scale = Vector2(0.215556, 0.0261781)
+texture = ExtResource("2_wd07a")
+
+[node name="Img20210723173340" type="Sprite2D" parent="plata"]
+position = Vector2(638.5, 184)
+scale = Vector2(0.0985185, 0.026178)
+texture = ExtResource("2_wd07a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plata"]
+position = Vector2(638.5, 184)
+shape = SubResource("RectangleShape2D_huhyq")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="plata"]
+position = Vector2(-104, 181)
+shape = SubResource("RectangleShape2D_bsgdm")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="plata"]
+position = Vector2(1385.38, 200.75)
+shape = SubResource("RectangleShape2D_rtnf5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="plata"]
+position = Vector2(464.5, 446)
+shape = SubResource("RectangleShape2D_qlj74")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="plata"]
+position = Vector2(825, 446)
+shape = SubResource("RectangleShape2D_j4qbb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="plata"]
+position = Vector2(1130.5, 833)
+shape = SubResource("RectangleShape2D_ku6cr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="plata"]
+position = Vector2(145, 832)
+shape = SubResource("RectangleShape2D_gangp")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="plata"]
+position = Vector2(658.5, 741.5)
+shape = SubResource("RectangleShape2D_t4v58")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="plata"]
+position = Vector2(643.75, 600)
+shape = SubResource("RectangleShape2D_57rbl")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="plata"]
+position = Vector2(170, 324)
+shape = SubResource("RectangleShape2D_6m8rf")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="plata"]
+position = Vector2(1147, 324)
+shape = SubResource("RectangleShape2D_0tfrr")
+
+[node name="Mar" parent="plata" instance=ExtResource("2_w33ud")]
+position = Vector2(634, 146)
+
+[node name="Camera2D" type="Camera2D" parent="plata/Mar"]
+limit_left = 0
+limit_top = 0
+limit_right = 1276
+limit_bottom = 982
+editor_draw_screen = false
+editor_draw_limits = true
+
+[node name="portal" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(134, 660)
+
+[node name="portal2" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(1143, 660)
+
+[node name="portal3" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(601, 381)
+
+[node name="portal4" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(727, 382)
+
+[node name="portal5" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(-191, 37)
+
+[node name="portal6" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(1460, 32)
+
+[node name="portal7" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(-191, 949)
+
+[node name="portal8" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(1462, 949)

@@ -11,7 +11,7 @@ func _ready():
 	twe2.chain().tween_property(tambieste,"position:y",tambieste.position.y+10, 0.5)
 	twe2.play()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if "seminknuc" in Powahuptas.powahuptas:
 		self.free()
 

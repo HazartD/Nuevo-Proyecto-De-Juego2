@@ -6,11 +6,6 @@ func _ready():
 	$Label.text = tr("inutil","es")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_body_entered(body):
-	Powahuptas.babosadas =+1
+func _on_body_entered(_body):
+	Powahuptas.babosadas +=1
 	queue_free()

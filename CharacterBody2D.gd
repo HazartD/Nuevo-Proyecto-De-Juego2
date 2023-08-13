@@ -1,7 +1,9 @@
 extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-var AyAybutnoyforme :PackedScene = preload("res://ayaybutnoyforme.tscn")
+const AyAybutnoyforme :PackedScene = preload("res://ayaybutnoyforme.tscn")
+const trolo :PackedScene = preload("res://noseastrolo.tscn")
+const pelemmela :PackedScene = preload("res://pelamela.tscn")
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var saltos=0
@@ -23,19 +25,29 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 			saltos+=1
 			$salto2.play()
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if "tegoelpoderabsolutoymelapelas" in Powahuptas.powahuptas and Input.is_action_just_pressed("clip"):
+	if "tegoelpoderabsolutoymelapelas" in Powahuptas.powahuptas and Input.is_action_just_pressed("clip") and !"aafceq'aibfue'unoab" in Powahuptas.powahuptas:
 		$AyAybutnoyforme.play()
 		var disparito = AyAybutnoyforme.instantiate()
 		add_child(disparito)
 		disparito.global_position = position
 		disparito.velocity = get_local_mouse_position() *delta *100
+	if "machacavergas" in Powahuptas.powahuptas and Input.is_action_just_pressed("evil_clip") and !"aafceq'aibfue'unoab" in Powahuptas.powahuptas:
+		$AyAybutnoyforme.play()
+		var bonba = trolo.instantiate()
+		add_child(bonba)
+		bonba.global_position = position
+		bonba.velocity = get_local_mouse_position() *delta *100
+	if "aafceq'aibfue'unoab" in Powahuptas.powahuptas and Input.is_action_just_pressed("evil_clip") or Input.is_action_just_pressed("clip"):
+		$AyAybutnoyforme.play()
+		var chupala = pelemmela.instantiate()
+		add_child(chupala)
+		chupala.global_position = position
+		chupala.velocity = get_local_mouse_position() *delta *100
 	move_and_slide()
 func a_Y_a_Y():
 	queue_free()

@@ -4,6 +4,6 @@ extends Area2D
 func _ready():
 	giro.play("Girodañaino")
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	ara.play()
 	Muerte.Muerte()

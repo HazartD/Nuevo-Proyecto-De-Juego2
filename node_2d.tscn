@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cuimv80je2vsn"]
+[gd_scene load_steps=31 format=3 uid="uid://cuimv80je2vsn"]
 
 [ext_resource type="Texture2D" uid="uid://eyeuvdi20cnj" path="res://FJCGdDKWQAUGi1D.jpg" id="3_eb53c"]
 [ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="4_6myt8"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cvxmxtul1xosb" path="res://cruz.tscn" id="7_apev2"]
 [ext_resource type="PackedScene" uid="uid://cfi02ny6klhe4" path="res://xxx.tscn" id="8_mmlmd"]
 [ext_resource type="Script" path="res://salida_alnivel2.gd" id="9_vfonr"]
-[ext_resource type="PackedScene" uid="uid://bkk8bhfh0gp62" path="res://enemaigo.tscn" id="10_1gxfq"]
+[ext_resource type="Script" path="res://TextEdit.gd" id="12_bna4j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c76xd"]
 
@@ -70,12 +70,6 @@ size = Vector2(64, 48)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8ej3r"]
 a = Vector2(61, 0)
 b = Vector2(-39, -1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eri7o"]
-size = Vector2(20, 38)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdie"]
-size = Vector2(90, 35)
 
 [node name="Nivel1" type="Node2D"]
 script = ExtResource("9_vfonr")
@@ -287,27 +281,16 @@ scale = Vector2(0.1, 0.1)
 [node name="Cruz" parent="." instance=ExtResource("7_apev2")]
 position = Vector2(14, 43)
 
-[node name="salida_cruz" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="salida_cruz"]
-position = Vector2(14, 43)
-shape = SubResource("RectangleShape2D_eri7o")
-
 [node name="Xxx" parent="." instance=ExtResource("8_mmlmd")]
 position = Vector2(522, 31)
 
-[node name="salida_xxx" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 520.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 50
+script = ExtResource("12_bna4j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="salida_xxx"]
-position = Vector2(554, 55.5)
-shape = SubResource("RectangleShape2D_cpdie")
-
-[node name="enemaigo" parent="." instance=ExtResource("10_1gxfq")]
-position = Vector2(456, 296)
-
-[connection signal="body_entered" from="salida_cruz" to="." method="_on_salida_cruz_body_entered"]
-[connection signal="body_entered" from="salida_xxx" to="." method="_on_salida_xxx_body_entered"]
+[connection signal="body_entered" from="Cruz" to="." method="_on_salida_cruz_body_entered"]
+[connection signal="body_entered" from="Xxx" to="." method="_on_salida_xxx_body_entered"]
