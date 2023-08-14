@@ -5,3 +5,4 @@ var XXX: int
 var matacionesasesinas:int
 var babosadas:int
 var rompehogares:int
+	

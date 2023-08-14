@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Control.gd" id="1_72400"]
 
 [node name="Muerte" type="Control"]
-z_index = 101
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,4 +26,6 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_group_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9

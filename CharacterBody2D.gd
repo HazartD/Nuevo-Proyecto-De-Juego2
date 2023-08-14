@@ -20,11 +20,10 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		saltos=1
 		$salto.play()
-	if saltos<=1 and "seminknuc" in Powahuptas.powahuptas: #por el knucles de booom
-		if Input.is_action_just_pressed("ui_up") and not is_on_floor():
-			velocity.y = JUMP_VELOCITY
-			saltos+=1
-			$salto2.play()
+	if saltos<=1 and "seminknuc" in Powahuptas.powahuptas and Input.is_action_just_pressed("ui_up") and not is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		saltos+=1
+		$salto2.play()
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
