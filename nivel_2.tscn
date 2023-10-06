@@ -33,7 +33,7 @@ size = Vector2(213, 4.75)
 size = Vector2(159.148, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckk2m"]
-size = Vector2(53, 16)
+size = Vector2(93, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuofi"]
 size = Vector2(43, 10)
@@ -51,7 +51,7 @@ size = Vector2(93, 20)
 size = Vector2(41, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ejrl"]
-size = Vector2(50, 8)
+size = Vector2(97, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ebnq"]
 size = Vector2(50, 16)
@@ -79,7 +79,7 @@ shape = SubResource("SegmentShape2D_pd3hp")
 shape = SubResource("SegmentShape2D_gvdas")
 
 [node name="Mar" parent="." instance=ExtResource("2_0druc")]
-position = Vector2(1024, 1120)
+position = Vector2(1048, 1144)
 
 [node name="plata" type="StaticBody2D" parent="."]
 
@@ -99,8 +99,8 @@ scale = Vector2(0.18878, 0.0037037)
 texture = ExtResource("4_l0hqj")
 
 [node name="Optimismo4" type="Sprite2D" parent="plata"]
-position = Vector2(24, 312)
-scale = Vector2(0.045, 0.007)
+position = Vector2(47.3663, 312)
+scale = Vector2(0.086614, 0.007)
 texture = ExtResource("4_l0hqj")
 
 [node name="Optimismo5" type="Sprite2D" parent="plata"]
@@ -119,8 +119,8 @@ scale = Vector2(0.0383096, 0.00920371)
 texture = ExtResource("4_l0hqj")
 
 [node name="Optimismo8" type="Sprite2D" parent="plata"]
-position = Vector2(1050.27, 744)
-scale = Vector2(0.0467917, 0.0148148)
+position = Vector2(1030.27, 744)
+scale = Vector2(0.0824074, 0.0148148)
 texture = ExtResource("4_l0hqj")
 
 [node name="Optimismo9" type="Sprite2D" parent="plata"]
@@ -151,7 +151,7 @@ position = Vector2(600, 808)
 shape = SubResource("RectangleShape2D_e3jxb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="plata"]
-position = Vector2(1050.5, 744)
+position = Vector2(1030.5, 744)
 shape = SubResource("RectangleShape2D_ckk2m")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="plata"]
@@ -175,7 +175,7 @@ position = Vector2(16, 152)
 shape = SubResource("RectangleShape2D_0s6pg")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="plata"]
-position = Vector2(24, 312)
+position = Vector2(47.5, 312)
 shape = SubResource("RectangleShape2D_6ejrl")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="plata"]
@@ -240,4 +240,22 @@ editor_draw_limits = true
 [node name="portal" parent="." instance=ExtResource("7_ws34w")]
 position = Vector2(488, 96)
 
+[node name="portal2" parent="." instance=ExtResource("7_ws34w")]
+position = Vector2(1048, 1072)
+
+[node name="Label" type="Label" parent="portal2"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
 [connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
+[connection signal="body_entered" from="portal2" to="." method="_on_portal_2_body_entered"]

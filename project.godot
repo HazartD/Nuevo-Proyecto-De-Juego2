@@ -79,6 +79,7 @@ esc={
 
 [internationalization]
 
+locale/translation_remaps={}
 locale/translations=PackedStringArray("res://traduccion.es.translation")
 
 [layer_names]

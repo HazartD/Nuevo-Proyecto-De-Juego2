@@ -1,10 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://cuimv80je2vsn"]
+[gd_scene load_steps=30 format=3 uid="uid://cuimv80je2vsn"]
 
 [ext_resource type="Texture2D" uid="uid://eyeuvdi20cnj" path="res://FJCGdDKWQAUGi1D.jpg" id="3_eb53c"]
 [ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="4_6myt8"]
 [ext_resource type="Texture2D" uid="uid://cnkh5x40lovnn" path="res://digital_hazard.PNG" id="4_n54do"]
 [ext_resource type="Texture2D" uid="uid://bogigiudu387i" path="res://69.jpg" id="5_7y7c5"]
-[ext_resource type="Script" path="res://Seminknuc.gd" id="5_gsrrs"]
 [ext_resource type="PackedScene" uid="uid://ciucw8f0su2v2" path="res://seminknuc.tscn" id="6_6h4dp"]
 [ext_resource type="PackedScene" uid="uid://d4mt25m5nmew6" path="res://cosa_que_daña_censurada.tscn" id="6_787qh"]
 [ext_resource type="PackedScene" uid="uid://cvxmxtul1xosb" path="res://cruz.tscn" id="7_apev2"]
@@ -251,14 +250,6 @@ editor_description = "A vece pareciera que no hay forma de volver, sin embargo, 
 position = Vector2(333, 104)
 shape = SubResource("SegmentShape2D_8ej3r")
 
-[node name="seminknuc" parent="." instance=ExtResource("6_6h4dp")]
-position = Vector2(260, 70)
-script = ExtResource("5_gsrrs")
-
-[node name="seminknuc2" parent="." instance=ExtResource("6_6h4dp")]
-position = Vector2(510, 117)
-script = ExtResource("5_gsrrs")
-
 [node name="Mar" parent="." instance=ExtResource("4_6myt8")]
 position = Vector2(303, 505)
 
@@ -292,5 +283,13 @@ offset_bottom = 440.0
 theme_override_font_sizes/font_size = 50
 script = ExtResource("12_bna4j")
 
+[node name="Seminknuc" parent="." instance=ExtResource("6_6h4dp")]
+position = Vector2(260, 70)
+
+[node name="Seminknuc2" parent="." instance=ExtResource("6_6h4dp")]
+position = Vector2(510, 117)
+
 [connection signal="body_entered" from="Cruz" to="." method="_on_salida_cruz_body_entered"]
 [connection signal="body_entered" from="Xxx" to="." method="_on_salida_xxx_body_entered"]
+[connection signal="body_entered" from="Seminknuc" to="." method="_on_seminknuc_body_entered"]
+[connection signal="body_entered" from="Seminknuc2" to="." method="_on_seminknuc_2_body_entered"]

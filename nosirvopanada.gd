@@ -1,9 +1,7 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label.text = tr("inutil","es")
+	$Label.text = tr("inutil",Powahuptas.Ideoma)
 
 
 func _on_body_entered(_body):

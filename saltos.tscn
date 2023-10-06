@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccxivk2fhx4ws"]
+
+[ext_resource type="Script" path="res://saltos.gd" id="1_dxu1w"]
+[ext_resource type="PackedScene" uid="uid://bs6qyckd34kla" path="res://portal.tscn" id="1_wkulo"]
+[ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="3_eekn4"]
+
+[node name="saltos" type="Node2D"]
+script = ExtResource("1_dxu1w")
+
+[node name="portal" parent="." instance=ExtResource("1_wkulo")]
+position = Vector2(54, 96)
+
+[node name="Mar" parent="." instance=ExtResource("3_eekn4")]
+position = Vector2(55, 3)
+
+[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]

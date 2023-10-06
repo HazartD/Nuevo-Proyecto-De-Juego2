@@ -1,0 +1,386 @@
+[gd_scene load_steps=27 format=3 uid="uid://cpb547hxumvd7"]
+
+[ext_resource type="Script" path="res://saltar.gd" id="1_amjxj"]
+[ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="1_uiy6d"]
+[ext_resource type="Texture2D" uid="uid://coom5elxny68t" path="res://Optimismo.png" id="3_elcch"]
+[ext_resource type="PackedScene" uid="uid://bs6qyckd34kla" path="res://portal.tscn" id="4_inirw"]
+[ext_resource type="PackedScene" uid="uid://ciucw8f0su2v2" path="res://seminknuc.tscn" id="5_bcv6s"]
+[ext_resource type="PackedScene" uid="uid://d4mt25m5nmew6" path="res://cosa_que_daña_censurada.tscn" id="6_piou3"]
+[ext_resource type="PackedScene" uid="uid://cyel2hi2pmyid" path="res://nosirvopanada.tscn" id="7_sjlbw"]
+[ext_resource type="PackedScene" uid="uid://c2vfetkhutw24" path="res://enemflota.tscn" id="8_4s8xt"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0hu4t"]
+a = Vector2(0, 944)
+b = Vector2(0, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sgd62"]
+a = Vector2(1450, 0)
+b = Vector2(1450, 944)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c0rpc"]
+a = Vector2(1450, 0)
+b = Vector2(0, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tn0kn"]
+a = Vector2(0, 944)
+b = Vector2(1450, 944)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrmaf"]
+size = Vector2(147, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ksp1"]
+size = Vector2(10, 267)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd3ib"]
+size = Vector2(481, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilotv"]
+size = Vector2(1346.5, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hc03j"]
+size = Vector2(1235, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trhdo"]
+size = Vector2(505, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnugq"]
+size = Vector2(998, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oc41c"]
+size = Vector2(1156, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtrd0"]
+size = Vector2(1174, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p7d4"]
+size = Vector2(1176, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3iut6"]
+a = Vector2(0, -133.5)
+b = Vector2(0, 70.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dnn3"]
+size = Vector2(66, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q0jl"]
+size = Vector2(155, 78)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_88hx0"]
+b = Vector2(90, 0)
+
+[node name="Saltar" type="Node2D"]
+script = ExtResource("1_amjxj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 1450.0
+offset_bottom = 944.0
+color = Color(0.0980392, 0.0980392, 0.0117647, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_0hu4t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_sgd62")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_c0rpc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_tn0kn")
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D"]
+offset_right = 259.0
+offset_bottom = 269.0
+color = Color(0.431373, 0.431373, 0.431373, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="StaticBody2D"]
+offset_left = 975.0
+offset_top = 295.0
+offset_right = 1329.0
+offset_bottom = 618.0
+color = Color(0.537255, 0, 0.00392157, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="StaticBody2D"]
+offset_left = 124.0
+offset_top = 603.0
+offset_right = 453.0
+offset_bottom = 824.0
+color = Color(0.0196078, 0.32549, 0.313726, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1450
+limit_bottom = 944
+editor_draw_limits = true
+
+[node name="portal" parent="." instance=ExtResource("4_inirw")]
+position = Vector2(36, 41)
+
+[node name="Seminknuc" parent="." instance=ExtResource("5_bcv6s")]
+position = Vector2(232, 912)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Optimismo" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(78.425, 227.5)
+scale = Vector2(0.131, 0.131)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo2" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(676, 311)
+scale = Vector2(1.199, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo4" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(832.75, 385)
+scale = Vector2(1.1, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo3" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(367.605, 458)
+scale = Vector2(0.428504, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo5" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(927.438, 458)
+scale = Vector2(0.4498, 0.0087963)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo6" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(861.069, 672)
+scale = Vector2(1.04529, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo7" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(951, 536)
+scale = Vector2(0.889, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo8" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(181, 596.71)
+scale = Vector2(0.009, 0.246833)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo9" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(765, 600)
+scale = Vector2(1.03029, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo10" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(772.028, 736)
+scale = Vector2(1.04714, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="Optimismo11" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(270, 843)
+scale = Vector2(0.077, 0.186)
+texture = ExtResource("3_elcch")
+offset = Vector2(-560, 0)
+
+[node name="Optimismo12" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(1417.09, 856)
+scale = Vector2(0.0589332, 0.009)
+texture = ExtResource("3_elcch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(78.5, 227.5)
+shape = SubResource("RectangleShape2D_jrmaf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(181, 596.5)
+shape = SubResource("RectangleShape2D_1ksp1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(367.5, 458)
+shape = SubResource("RectangleShape2D_nd3ib")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(675.75, 311)
+shape = SubResource("RectangleShape2D_ilotv")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(832.5, 385)
+shape = SubResource("RectangleShape2D_hc03j")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(927.5, 458)
+shape = SubResource("RectangleShape2D_trhdo")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(951, 536)
+shape = SubResource("RectangleShape2D_vnugq")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(765, 600)
+shape = SubResource("RectangleShape2D_oc41c")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(861, 672)
+shape = SubResource("RectangleShape2D_vtrd0")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(772, 736)
+shape = SubResource("RectangleShape2D_6p7d4")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(270, 874.5)
+shape = SubResource("SegmentShape2D_3iut6")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1417, 856)
+shape = SubResource("RectangleShape2D_1dnn3")
+
+[node name="Cosa censurada" parent="." instance=ExtResource("6_piou3")]
+position = Vector2(187, 186)
+scale = Vector2(0.2, 0.2)
+
+[node name="Seminknuc2" parent="." instance=ExtResource("5_bcv6s")]
+position = Vector2(1000, 264)
+
+[node name="Label" type="Label" parent="Seminknuc2"]
+offset_left = -294.0
+offset_top = -102.0
+offset_right = -33.0
+offset_bottom = -29.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Cosa censurada2" parent="." instance=ExtResource("6_piou3")]
+position = Vector2(30, 850)
+scale = Vector2(0.15, 0.15)
+
+[node name="portal2" parent="." instance=ExtResource("4_inirw")]
+visible = false
+position = Vector2(36, 913)
+monitoring = false
+
+[node name="Cosa censurada3" parent="." instance=ExtResource("6_piou3")]
+position = Vector2(90, 850)
+scale = Vector2(0.15, 0.15)
+
+[node name="nofurula" parent="." instance=ExtResource("7_sjlbw")]
+position = Vector2(9, 507)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cosa censurada4" parent="." instance=ExtResource("6_piou3")]
+position = Vector2(150, 850)
+scale = Vector2(0.15, 0.15)
+
+[node name="Cosa censurada5" parent="." instance=ExtResource("6_piou3")]
+position = Vector2(1207, 460)
+scale = Vector2(0.05, 0.05)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(144, 807)
+collision_layer = 0
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(45.5, -25)
+shape = SubResource("RectangleShape2D_8q0jl")
+
+[node name="enemflota" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(836, 349)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota2" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(999, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota3" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(935, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota4" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(871, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota5" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(807, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota6" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(743, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota7" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(679, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota8" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(637, 802)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota9" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(637, 862)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota10" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(629, 894)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota11" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(629, 770)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota12" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(589, 770)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota13" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(589, 894)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota14" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(588, 802)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota15" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(588, 862)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota16" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(608, 832)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota17" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(549, 770)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota18" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(539, 802)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota19" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(549, 894)
+scale = Vector2(0.1, 0.1)
+
+[node name="enemflota20" parent="." instance=ExtResource("8_4s8xt")]
+position = Vector2(539, 862)
+scale = Vector2(0.1, 0.1)
+
+[node name="Mar" parent="." instance=ExtResource("1_uiy6d")]
+position = Vector2(37, 95)
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1360, 736)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("SegmentShape2D_88hx0")
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
+[connection signal="body_entered" from="Seminknuc" to="." method="_on_seminknuc_body_entered"]
+[connection signal="body_entered" from="Seminknuc2" to="." method="_on_seminknuc_2_body_entered"]
+[connection signal="body_entered" from="portal2" to="." method="_on_portal_2_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

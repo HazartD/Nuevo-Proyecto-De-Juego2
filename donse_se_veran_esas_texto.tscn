@@ -1,0 +1,347 @@
+[gd_scene load_steps=3 format=3 uid="uid://b546wvxotprkq"]
+
+[ext_resource type="Script" path="res://a_los_textos.gd" id="1_4ooua"]
+[ext_resource type="Texture2D" uid="uid://bc4tpnoauodtj" path="res://img05082023_029.jpg" id="2_4tnup"]
+
+[node name="Control" type="Control"]
+process_mode = 3
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ooua")
+metadata/_edit_vertical_guides_ = []
+
+[node name="Img05082023029" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+scale = Vector2(0.102058, 0.127524)
+texture = ExtResource("2_4tnup")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -260.0
+offset_right = 260.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="Button" type="Button" parent="BoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="BoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -44.0
+offset_right = 196.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="BoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button3" type="Button" parent="BoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button4" type="Button" parent="BoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button5" type="Button" parent="BoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = -40.0
+offset_right = 92.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+wrap_mode = 1
+
+[node name="R" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nigga" type="BoxContainer" parent="R"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="TextEdit" type="TextEdit" parent="R/Nigga"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="R/Nigga"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit3" type="TextEdit" parent="R/Nigga"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit4" type="TextEdit" parent="R/Nigga"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="encadenado" type="BoxContainer" parent="R"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="TextEdit" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit3" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit4" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit5" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit6" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit7" type="TextEdit" parent="R/encadenado"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="Escueña" type="BoxContainer" parent="R"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="TextEdit" type="TextEdit" parent="R/Escueña"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="R/Escueña"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit3" type="TextEdit" parent="R/Escueña"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit4" type="TextEdit" parent="R/Escueña"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit5" type="TextEdit" parent="R/Escueña"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit6" type="TextEdit" parent="R/Escueña"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="Documental" type="BoxContainer" parent="R"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="TextEdit" type="TextEdit" parent="R/Documental"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="R/Documental"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit3" type="TextEdit" parent="R/Documental"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit4" type="TextEdit" parent="R/Documental"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="robots" type="BoxContainer" parent="R"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="TextEdit" type="TextEdit" parent="R/robots"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="R/robots"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit3" type="TextEdit" parent="R/robots"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit4" type="TextEdit" parent="R/robots"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit5" type="TextEdit" parent="R/robots"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="TextEdit6" type="TextEdit" parent="R/robots"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 64.0
+
+[connection signal="visibility_changed" from="BoxContainer" to="." method="_on_box_container_visibility_changed"]
+[connection signal="pressed" from="BoxContainer/Button" to="." method="nigga_pressed"]
+[connection signal="pressed" from="BoxContainer/Button2" to="." method="cadena_pressed"]
+[connection signal="pressed" from="BoxContainer/Button3" to="." method="ecuela_pressed"]
+[connection signal="pressed" from="BoxContainer/Button4" to="." method="documen4_pressed"]
+[connection signal="pressed" from="BoxContainer/Button5" to="." method="clavo_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

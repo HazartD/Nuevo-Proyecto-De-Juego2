@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://3pncnp62y4ox"]
+[gd_scene load_steps=21 format=3 uid="uid://3pncnp62y4ox"]
 
+[ext_resource type="Script" path="res://loby.gd" id="1_3ttbp"]
 [ext_resource type="Texture2D" uid="uid://c6qhfn3mwjd4w" path="res://El_Salvador.png" id="1_8fjgk"]
 [ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="2_w33ud"]
 [ext_resource type="Texture2D" uid="uid://h03vp8gybspk" path="res://IMG_20210723_173330.jpg" id="2_wd07a"]
@@ -55,6 +56,7 @@ size = Vector2(132, 14)
 size = Vector2(132, 14)
 
 [node name="diversificacion" type="Node2D"]
+script = ExtResource("1_3ttbp")
 
 [node name="fondo" type="StaticBody2D" parent="."]
 metadata/_edit_group_ = true
@@ -176,16 +178,8 @@ shape = SubResource("RectangleShape2D_6m8rf")
 position = Vector2(1147, 324)
 shape = SubResource("RectangleShape2D_0tfrr")
 
-[node name="Mar" parent="plata" instance=ExtResource("2_w33ud")]
-position = Vector2(634, 146)
-
-[node name="Camera2D" type="Camera2D" parent="plata/Mar"]
-limit_left = 0
-limit_top = 0
-limit_right = 1276
-limit_bottom = 982
-editor_draw_screen = false
-editor_draw_limits = true
+[node name="Mar" parent="." instance=ExtResource("2_w33ud")]
+position = Vector2(647, 85)
 
 [node name="portal" parent="." instance=ExtResource("4_27tkj")]
 position = Vector2(134, 660)
@@ -210,3 +204,16 @@ position = Vector2(-191, 949)
 
 [node name="portal8" parent="." instance=ExtResource("4_27tkj")]
 position = Vector2(1462, 949)
+
+[node name="portal9" parent="." instance=ExtResource("4_27tkj")]
+position = Vector2(645, 26)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1275
+limit_bottom = 981
+editor_draw_limits = true
+
+[connection signal="body_entered" from="portal3" to="." method="_on_portal_3_body_entered"]
+[connection signal="body_entered" from="portal9" to="." method="_on_portal_9_body_entered"]

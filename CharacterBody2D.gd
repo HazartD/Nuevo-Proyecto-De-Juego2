@@ -4,6 +4,7 @@ const JUMP_VELOCITY = -400.0
 const AyAybutnoyforme :PackedScene = preload("res://ayaybutnoyforme.tscn")
 const trolo :PackedScene = preload("res://noseastrolo.tscn")
 const pelemmela :PackedScene = preload("res://pelamela.tscn")
+const textos :PackedScene = preload("res://menu.tscn")
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var saltos=0
@@ -34,19 +35,19 @@ func _physics_process(delta):
 		var disparito = AyAybutnoyforme.instantiate()
 		add_child(disparito)
 		disparito.global_position = position
-		disparito.velocity = get_local_mouse_position() *delta *100
+		disparito.velocity = get_local_mouse_position()*delta *100
 	if "machacavergas" in Powahuptas.powahuptas and Input.is_action_just_pressed("evil_clip") and !"aafceq'aibfue'unoab" in Powahuptas.powahuptas:
 		$AyAybutnoyforme.play()
 		var bonba = trolo.instantiate()
 		add_child(bonba)
 		bonba.global_position = position
-		bonba.velocity = get_local_mouse_position() *delta *100
-	if "aafceq'aibfue'unoab" in Powahuptas.powahuptas and Input.is_action_just_pressed("evil_clip") or Input.is_action_just_pressed("clip"):
+		bonba.velocity = get_local_mouse_position()*delta *100
+	if Powahuptas.powahuptas.has("aafceq'aibfue'unoab") and Input.is_action_just_pressed("evil_clip") or Input.is_action_just_pressed("clip"):
 		$AyAybutnoyforme.play()
 		var chupala = pelemmela.instantiate()
 		add_child(chupala)
 		chupala.global_position = position
-		chupala.velocity = get_local_mouse_position() *delta *100
+		chupala.velocity = get_local_mouse_position()*delta *100
 	move_and_slide()
 func a_Y_a_Y():
 	queue_free()
