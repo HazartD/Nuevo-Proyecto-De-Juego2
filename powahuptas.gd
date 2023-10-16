@@ -1,8 +1,8 @@
 extends Node
-var Ideoma:= "es"
 var powahuptas = ["seminknuc"]#"machacavergas","tegoelpoderabsolutoymelapelas","aafceq'aibfue'unoab",'uobnof"bibub"b oubo'
 var CRUZ : int
 var XXX: int
+var cambio:=false
 var matacionesasesinas:int
 var babosadas:int
 var rompehogares:int
@@ -15,3 +15,4 @@ var B:=[]#pasaron unas horas desde que la puse y ya no recuedo porque es "B", so
 var compl:=[]
 var ende:=[]
 var puzlechos:=[]
+var consegbab:=[]

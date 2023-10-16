@@ -1,7 +1,7 @@
 extends Area2D
 
 func _ready():
-	$Label.text = tr("inutil",Powahuptas.Ideoma)
+	$Label.text = tr("inutil")
 
 
 func _on_body_entered(_body):

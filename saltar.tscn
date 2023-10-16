@@ -44,7 +44,7 @@ size = Vector2(1235, 10)
 size = Vector2(505, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnugq"]
-size = Vector2(998, 10)
+size = Vector2(877, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oc41c"]
 size = Vector2(1156, 10)
@@ -105,10 +105,18 @@ color = Color(0.537255, 0, 0.00392157, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="StaticBody2D"]
 offset_left = 124.0
-offset_top = 603.0
-offset_right = 453.0
+offset_top = 409.0
+offset_right = 203.0
 offset_bottom = 824.0
 color = Color(0.0196078, 0.32549, 0.313726, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="StaticBody2D"]
+offset_left = 103.0
+offset_top = 94.0
+offset_right = 1529.0
+offset_bottom = 128.0
+rotation = 0.476475
+color = Color(0.431373, 0.431373, 0.431373, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -157,8 +165,8 @@ scale = Vector2(1.04529, 0.009)
 texture = ExtResource("3_elcch")
 
 [node name="Optimismo7" type="Sprite2D" parent="StaticBody2D2"]
-position = Vector2(951, 536)
-scale = Vector2(0.889, 0.009)
+position = Vector2(890.413, 536)
+scale = Vector2(0.781098, 0.009)
 texture = ExtResource("3_elcch")
 
 [node name="Optimismo8" type="Sprite2D" parent="StaticBody2D2"]
@@ -212,7 +220,7 @@ position = Vector2(927.5, 458)
 shape = SubResource("RectangleShape2D_trhdo")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(951, 536)
+position = Vector2(890.5, 536)
 shape = SubResource("RectangleShape2D_vnugq")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -273,8 +281,8 @@ position = Vector2(150, 850)
 scale = Vector2(0.15, 0.15)
 
 [node name="Cosa censurada5" parent="." instance=ExtResource("6_piou3")]
-position = Vector2(1207, 460)
-scale = Vector2(0.05, 0.05)
+position = Vector2(1211, 480)
+scale = Vector2(0.15, 0.15)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(144, 807)
@@ -367,7 +375,7 @@ position = Vector2(539, 862)
 scale = Vector2(0.1, 0.1)
 
 [node name="Mar" parent="." instance=ExtResource("1_uiy6d")]
-position = Vector2(37, 95)
+position = Vector2(35, 97)
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(1360, 736)
@@ -376,6 +384,12 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource("SegmentShape2D_88hx0")
+
+[node name="nofurula2" parent="." instance=ExtResource("7_sjlbw")]
+visible = false
+position = Vector2(148, 911)
+scale = Vector2(0.5, 0.5)
+monitoring = false
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]

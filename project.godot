@@ -13,14 +13,14 @@ config_version=5
 config/name="Nuevo Proyecto De Juego2"
 run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://FhAr0qfWYAI2cby.png"
+config/icon="res://icon.png"
 
 [autoload]
 
 Powahuptas="*res://powahuptas.gd"
 Muerte="*res://Muerte.gd"
 Bacsond="*res://bacsond.tscn"
-Menu="*res://menu.tscn"
 
 [display]
 
@@ -80,7 +80,7 @@ esc={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://traduccion.es.translation")
+locale/translations=PackedStringArray("res://traduccion.es.translation", "res://traduccion.en.translation")
 
 [layer_names]
 

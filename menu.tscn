@@ -6,10 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://q1oidrrbq4nk" path="res://atac.jpg" id="4_csfny"]
 [ext_resource type="Texture2D" uid="uid://uqkitohixqv3" path="res://Tyranomon.png" id="5_e3wfp"]
 
-[node name="Control" type="Control"]
+[node name="Menulayer" type="CanvasLayer"]
+layer = 10
+
+[node name="Control" type="Control" parent="."]
 process_mode = 3
 visible = false
-z_index = 10
 z_as_relative = false
 layout_mode = 3
 anchors_preset = 8
@@ -25,16 +27,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2vin6")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-layout_mode = 1
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 0
 offset_left = 275.0
 offset_top = 48.0
 offset_right = 599.0
 offset_bottom = 86.0
 wrap_mode = 1
 
-[node name="tutorial" type="Label" parent="."]
-layout_mode = 1
+[node name="tutorial" type="Label" parent="Control"]
+layout_mode = 0
 offset_right = 599.0
 offset_bottom = 45.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
@@ -42,27 +44,27 @@ theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 6
 autowrap_mode = 3
 
-[node name="Atac" type="Sprite2D" parent="."]
+[node name="Atac" type="Sprite2D" parent="Control"]
 position = Vector2(306, 164)
 scale = Vector2(0.404167, 0.609022)
 texture = ExtResource("4_csfny")
 
-[node name="Tyranomon" type="Sprite2D" parent="."]
+[node name="Tyranomon" type="Sprite2D" parent="Control"]
 position = Vector2(104.625, 323)
 scale = Vector2(0.218424, 0.265758)
 texture = ExtResource("5_e3wfp")
 
-[node name="DaleManPodesSerPut0PeroNoSeasTrol0" type="Sprite2D" parent="."]
+[node name="DaleManPodesSerPut0PeroNoSeasTrol0" type="Sprite2D" parent="Control"]
 position = Vector2(501.5, 164)
 scale = Vector2(0.182407, 0.15)
 texture = ExtResource("3_cjy6b")
 
-[node name="Sueño" type="Sprite2D" parent="."]
+[node name="Sueño" type="Sprite2D" parent="Control"]
 position = Vector2(104.5, 164)
 scale = Vector2(0.290278, 0.3)
 texture = ExtResource("2_qrqhj")
 
-[node name="jump" type="Label" parent="."]
+[node name="jump" type="Label" parent="Control"]
 layout_mode = 0
 offset_top = 83.0
 offset_right = 137.0
@@ -71,7 +73,7 @@ theme_override_colors/font_color = Color(0.960784, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
 autowrap_mode = 3
 
-[node name="enem" type="Label" parent="."]
+[node name="enem" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 209.0
 offset_top = 83.0
@@ -82,7 +84,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 0, 1)
 theme_override_constants/outline_size = 4
 autowrap_mode = 3
 
-[node name="trap" type="Label" parent="."]
+[node name="trap" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 403.0
 offset_top = 83.0
@@ -93,7 +95,7 @@ theme_override_colors/font_shadow_color = Color(1, 0.537255, 0, 1)
 theme_override_constants/shadow_outline_size = 6
 autowrap_mode = 3
 
-[node name="destructor" type="Label" parent="."]
+[node name="destructor" type="Label" parent="Control"]
 layout_mode = 0
 offset_top = 246.0
 offset_right = 196.0
@@ -103,8 +105,8 @@ theme_override_colors/font_shadow_color = Color(0.870588, 0.858824, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 101.0
 offset_top = 49.0
 offset_right = 270.0
@@ -112,4 +114,4 @@ offset_bottom = 80.0
 theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0.709804, 0.662745, 1)
 
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]

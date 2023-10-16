@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2vfetkhutw24"]
+[gd_scene load_steps=9 format=3 uid="uid://c2vfetkhutw24"]
 
 [ext_resource type="Script" path="res://enemflota.gd" id="1_mcwmr"]
 [ext_resource type="Texture2D" uid="uid://b6khnthk4sqo7" path="res://flota1.jpg" id="1_nmpo4"]
@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://5l35mthfmwxs" path="res://flota4.jpg" id="4_qwsce"]
 [ext_resource type="Texture2D" uid="uid://c6fapoce6ercd" path="res://flota5.jpg" id="5_akcye"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gqak"]
+size = Vector2(382, 278)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kp75"]
-size = Vector2(388, 284)
+size = Vector2(386, 282)
 
 [node name="enemflota" type="CharacterBody2D"]
 collision_layer = 4
@@ -42,8 +45,8 @@ position = Vector2(0.500021, 4.52995e-06)
 scale = Vector2(1.23794, 0.555118)
 texture = ExtResource("5_akcye")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_1kp75")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2gqak")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0

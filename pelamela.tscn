@@ -46,8 +46,8 @@ offset_bottom = 2.0
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rqkc0")
 
-[connection signal="area_entered" from="pelamela" to="." method="_on_notrolo_area_entered" flags=18]
 [connection signal="area_entered" from="pelamela" to="." method="_on_pelamela_area_entered"]
+[connection signal="area_entered" from="pelamela" to="." method="_on_notrolo_area_entered" flags=18]
 [connection signal="body_entered" from="pelamela" to="." method="_on_notrolo_body_entered" flags=18]
 [connection signal="body_entered" from="pelamela" to="." method="_on_pelamela_body_entered"]
 [connection signal="body_entered" from="pelamela" to="pelamela" method="_on_body_entered" flags=18]

@@ -2,5 +2,5 @@ extends Node
 signal aYaY
 func Muerte():
 	emit_signal("aYaY")
-	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_file("res://Muerte.tscn")
+	await get_tree().create_timer(0.5).timeout
+	get_tree().set_pause(true)

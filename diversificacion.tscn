@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://3pncnp62y4ox"]
+[gd_scene load_steps=22 format=3 uid="uid://3pncnp62y4ox"]
 
 [ext_resource type="Script" path="res://loby.gd" id="1_3ttbp"]
 [ext_resource type="Texture2D" uid="uid://c6qhfn3mwjd4w" path="res://El_Salvador.png" id="1_8fjgk"]
 [ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="2_w33ud"]
 [ext_resource type="Texture2D" uid="uid://h03vp8gybspk" path="res://IMG_20210723_173330.jpg" id="2_wd07a"]
 [ext_resource type="PackedScene" uid="uid://bs6qyckd34kla" path="res://portal.tscn" id="4_27tkj"]
+[ext_resource type="PackedScene" uid="uid://56yb6qgot6n4" path="res://menu.tscn" id="6_oa20e"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hluhq"]
 a = Vector2(-224, 0)
@@ -26,10 +27,10 @@ b = Vector2(1500, 982)
 size = Vector2(133, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsgdm"]
-size = Vector2(238.75, 17.5)
+size = Vector2(224.375, 16.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rtnf5"]
-size = Vector2(238.75, 17.5)
+size = Vector2(230.755, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlj74"]
 size = Vector2(285, 20)
@@ -80,13 +81,13 @@ shape = SubResource("SegmentShape2D_0x7ce")
 [node name="plata" type="StaticBody2D" parent="."]
 
 [node name="Img20210723173330" type="Sprite2D" parent="plata"]
-position = Vector2(-104, 181.5)
-scale = Vector2(0.176296, 0.0222513)
+position = Vector2(-111, 181.5)
+scale = Vector2(0.165926, 0.0222513)
 texture = ExtResource("2_wd07a")
 
 [node name="Img20210723173331" type="Sprite2D" parent="plata"]
-position = Vector2(1384, 200.5)
-scale = Vector2(0.174815, 0.0222513)
+position = Vector2(1388, 200.5)
+scale = Vector2(0.168889, 0.0222513)
 texture = ExtResource("2_wd07a")
 
 [node name="Img20210723173332" type="Sprite2D" parent="plata"]
@@ -139,11 +140,11 @@ position = Vector2(638.5, 184)
 shape = SubResource("RectangleShape2D_huhyq")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="plata"]
-position = Vector2(-104, 181)
+position = Vector2(-111.188, 181.375)
 shape = SubResource("RectangleShape2D_bsgdm")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="plata"]
-position = Vector2(1385.38, 200.75)
+position = Vector2(1389.38, 200.5)
 shape = SubResource("RectangleShape2D_rtnf5")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="plata"]
@@ -214,6 +215,8 @@ limit_top = 0
 limit_right = 1275
 limit_bottom = 981
 editor_draw_limits = true
+
+[node name="Menulayer" parent="." instance=ExtResource("6_oa20e")]
 
 [connection signal="body_entered" from="portal3" to="." method="_on_portal_3_body_entered"]
 [connection signal="body_entered" from="portal9" to="." method="_on_portal_9_body_entered"]

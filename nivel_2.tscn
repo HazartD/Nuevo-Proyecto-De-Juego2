@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://n5qc1vedl60r"]
+[gd_scene load_steps=24 format=3 uid="uid://n5qc1vedl60r"]
 
 [ext_resource type="Texture2D" uid="uid://b1seqwhole20d" path="res://IMG_20200704_132118 (2).jpg" id="1_s1h5h"]
 [ext_resource type="Script" path="res://nivel_2.gd" id="1_x6bl5"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://coom5elxny68t" path="res://Optimismo.png" id="4_l0hqj"]
 [ext_resource type="PackedScene" uid="uid://d4mt25m5nmew6" path="res://cosa_que_daña_censurada.tscn" id="5_1jcdi"]
 [ext_resource type="PackedScene" uid="uid://bs6qyckd34kla" path="res://portal.tscn" id="7_ws34w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rl4uj"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_vcoxy"]
 a = Vector2(0, 1178)
@@ -61,13 +63,14 @@ script = ExtResource("1_x6bl5")
 
 [node name="mapa" type="StaticBody2D" parent="."]
 
+[node name="Img20200704132118(2)" type="Sprite2D" parent="mapa"]
+material = SubResource("ShaderMaterial_rl4uj")
+position = Vector2(540, 589)
+texture = ExtResource("1_s1h5h")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mapa"]
 rotation = -7.22475e-05
 shape = SubResource("SegmentShape2D_vcoxy")
-
-[node name="Img20200704132118(2)" type="Sprite2D" parent="mapa"]
-position = Vector2(540, 589)
-texture = ExtResource("1_s1h5h")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="mapa"]
 shape = SubResource("SegmentShape2D_cmi45")
@@ -257,5 +260,6 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
 [connection signal="body_entered" from="portal2" to="." method="_on_portal_2_body_entered"]

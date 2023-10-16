@@ -14,6 +14,7 @@ func _on_pelamela_body_entered(body):
 
 func _on_area_2d_area_exited(_area):
 	$pelamela.monitoring = true
+	$Area2D.call_deferred("free")
 	$ColorRect.free()
 
 func _on_pelamela_area_entered(area):
