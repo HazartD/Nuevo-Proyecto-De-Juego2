@@ -16,7 +16,7 @@ func _ready():
 	if Powahuptas.ende.has("n2c5"): $"Cosa censurada5".free()
 func _process(_delta):
 	if $Mar:$Camera2D.position=$Mar.position
-func _on_portal_body_entered(body):
+func _on_portal_body_entered(_body):
 	get_tree().change_scene_to_file("res://diversificacion.tscn")
 	Powahuptas.cambio=true
 

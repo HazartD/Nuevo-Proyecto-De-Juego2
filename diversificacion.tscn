@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://3pncnp62y4ox"]
+[gd_scene load_steps=21 format=3 uid="uid://3pncnp62y4ox"]
 
 [ext_resource type="Script" path="res://loby.gd" id="1_3ttbp"]
 [ext_resource type="Texture2D" uid="uid://c6qhfn3mwjd4w" path="res://El_Salvador.png" id="1_8fjgk"]
 [ext_resource type="PackedScene" uid="uid://b42wbkj7yjv6h" path="res://MAR.tscn" id="2_w33ud"]
 [ext_resource type="Texture2D" uid="uid://h03vp8gybspk" path="res://IMG_20210723_173330.jpg" id="2_wd07a"]
 [ext_resource type="PackedScene" uid="uid://bs6qyckd34kla" path="res://portal.tscn" id="4_27tkj"]
-[ext_resource type="PackedScene" uid="uid://56yb6qgot6n4" path="res://menu.tscn" id="6_oa20e"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hluhq"]
 a = Vector2(-224, 0)
@@ -215,8 +214,6 @@ limit_top = 0
 limit_right = 1275
 limit_bottom = 981
 editor_draw_limits = true
-
-[node name="Menulayer" parent="." instance=ExtResource("6_oa20e")]
 
 [connection signal="body_entered" from="portal3" to="." method="_on_portal_3_body_entered"]
 [connection signal="body_entered" from="portal9" to="." method="_on_portal_9_body_entered"]

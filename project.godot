@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 Powahuptas="*res://powahuptas.gd"
 Muerte="*res://Muerte.gd"
 Bacsond="*res://bacsond.tscn"
+Menu="*res://menu.tscn"
 
 [display]
 
