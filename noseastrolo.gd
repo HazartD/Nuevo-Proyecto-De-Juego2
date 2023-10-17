@@ -13,6 +13,6 @@ func _on_area_2d_area_exited(_area):
 	$ColorRect.free()
 
 func _on_notrolo_area_entered(area):
-	area.free()
+	Powahuptas.mate(area.N,area)
 	Powahuptas.rompehogares+=1
 	queue_free()

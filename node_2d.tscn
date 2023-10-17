@@ -271,9 +271,13 @@ scale = Vector2(0.1, 0.1)
 
 [node name="Cruz" parent="." instance=ExtResource("7_apev2")]
 position = Vector2(14, 43)
+Cam = true
+Ruta = "res://nivel_2.tscn"
 
 [node name="Xxx" parent="." instance=ExtResource("8_mmlmd")]
-position = Vector2(522, 31)
+position = Vector2(552, 48)
+Cam = true
+Ruta = "\"res://nivel_2.tscn\""
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 40.0
@@ -289,7 +293,5 @@ position = Vector2(260, 70)
 [node name="Seminknuc2" parent="." instance=ExtResource("6_6h4dp")]
 position = Vector2(510, 117)
 
-[connection signal="body_entered" from="Cruz" to="." method="_on_salida_cruz_body_entered"]
-[connection signal="body_entered" from="Xxx" to="." method="_on_salida_xxx_body_entered"]
 [connection signal="body_entered" from="Seminknuc" to="." method="_on_seminknuc_body_entered"]
 [connection signal="body_entered" from="Seminknuc2" to="." method="_on_seminknuc_2_body_entered"]

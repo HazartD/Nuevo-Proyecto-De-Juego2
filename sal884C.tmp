@@ -127,8 +127,6 @@ editor_draw_limits = true
 
 [node name="portal" parent="." instance=ExtResource("4_inirw")]
 position = Vector2(36, 41)
-Lv = "salta"
-Ruta = "res://diversificacion.tscn"
 
 [node name="Seminknuc" parent="." instance=ExtResource("5_bcv6s")]
 position = Vector2(232, 912)
@@ -271,8 +269,6 @@ N = "src2"
 visible = false
 position = Vector2(36, 913)
 monitoring = false
-Lv = "salta"
-Ruta = "res://saltos.tscn"
 
 [node name="Cosa censurada3" parent="." instance=ExtResource("6_piou3")]
 position = Vector2(90, 850)
@@ -282,7 +278,6 @@ N = "src3"
 [node name="nofurula" parent="." instance=ExtResource("7_sjlbw")]
 position = Vector2(9, 507)
 scale = Vector2(0.5, 0.5)
-No = "srn"
 
 [node name="Cosa censurada4" parent="." instance=ExtResource("6_piou3")]
 position = Vector2(150, 850)
@@ -307,7 +302,6 @@ shape = SubResource("RectangleShape2D_8q0jl")
 [node name="enemflota" parent="." instance=ExtResource("8_4s8xt")]
 position = Vector2(836, 349)
 scale = Vector2(0.1, 0.1)
-N = "srf"
 
 [node name="enemflota2" parent="." instance=ExtResource("8_4s8xt")]
 position = Vector2(999, 832)
@@ -401,9 +395,9 @@ visible = false
 position = Vector2(148, 911)
 scale = Vector2(0.5, 0.5)
 monitoring = false
-No = "srn2"
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
 [connection signal="body_entered" from="Seminknuc" to="." method="_on_seminknuc_body_entered"]
 [connection signal="body_entered" from="Seminknuc2" to="." method="_on_seminknuc_2_body_entered"]
 [connection signal="body_entered" from="portal2" to="." method="_on_portal_2_body_entered"]

@@ -189,6 +189,8 @@ position = Vector2(1143, 660)
 
 [node name="portal3" parent="." instance=ExtResource("4_27tkj")]
 position = Vector2(601, 381)
+Lv = "diversi"
+Ruta = "res://saltar.tscn"
 
 [node name="portal4" parent="." instance=ExtResource("4_27tkj")]
 position = Vector2(727, 382)
@@ -207,6 +209,8 @@ position = Vector2(1462, 949)
 
 [node name="portal9" parent="." instance=ExtResource("4_27tkj")]
 position = Vector2(645, 26)
+Lv = "diversi"
+Ruta = "res://nivel_2.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -214,6 +218,3 @@ limit_top = 0
 limit_right = 1275
 limit_bottom = 981
 editor_draw_limits = true
-
-[connection signal="body_entered" from="portal3" to="." method="_on_portal_3_body_entered"]
-[connection signal="body_entered" from="portal9" to="." method="_on_portal_9_body_entered"]

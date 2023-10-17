@@ -12,6 +12,5 @@ func _ready():
 	twe2.play()
 
 
-
 func _on_body_entered(_body):
 	queue_free()

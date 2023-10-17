@@ -49,4 +49,5 @@ func _physics_process(delta):
 		chupala.velocity = get_local_mouse_position()*delta *100
 	move_and_slide()
 func a_Y_a_Y():
+	$Mar.material = "res://MAR.tres"
 	queue_free()

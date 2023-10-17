@@ -16,3 +16,10 @@ var compl:=[]
 var ende:=[]
 var puzlechos:=[]
 var consegbab:=[]
+
+
+func sacar(array:Array,nombre:String,nodes:Array):
+	if array.has(nombre):for nod in nodes:nod.free()
+func mate(Nom,elque):
+	if !Powahuptas.ende.has(Nom): Powahuptas.ende.append(Nom)
+	elque.free()

@@ -10,6 +10,7 @@ size = Vector2(34, 28)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_u3gex")
+Objet = null
 metadata/_edit_group_ = true
 
 [node name="Sueño" type="Sprite2D" parent="."]

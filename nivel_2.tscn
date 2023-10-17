@@ -188,49 +188,61 @@ shape = SubResource("RectangleShape2D_7ebnq")
 [node name="nofurula" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(328, 1000)
 scale = Vector2(0.5, 0.5)
+No = "n2n"
 
 [node name="nofurula2" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(560, 1000)
 scale = Vector2(0.5, 0.5)
+No = "n2n2"
 
 [node name="nofurula3" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(760, 976)
 scale = Vector2(0.5, 0.5)
+No = "n2n3"
 
 [node name="nofurula4" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(432, 928)
 scale = Vector2(0.2, 0.2)
+No = "n2n4"
 
 [node name="nofurula5" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(448, 80)
+No = "n2n5"
 
 [node name="nofurula6" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(240, 624)
 scale = Vector2(0.5, 0.5)
+No = "n2n6"
 
 [node name="Cosa censurada" parent="." instance=ExtResource("5_1jcdi")]
 position = Vector2(288, 624)
 scale = Vector2(0.13, 0.13)
+N = "n2c"
 
 [node name="Cosa censurada2" parent="." instance=ExtResource("5_1jcdi")]
 position = Vector2(240, 576)
 scale = Vector2(0.13, 0.13)
+N = "n2c2"
 
 [node name="Cosa censurada3" parent="." instance=ExtResource("5_1jcdi")]
 position = Vector2(240, 672)
 scale = Vector2(0.13, 0.13)
+N = "n2c3"
 
 [node name="Cosa censurada4" parent="." instance=ExtResource("5_1jcdi")]
 position = Vector2(192, 624)
 scale = Vector2(0.13, 0.13)
+N = "n2c4"
 
 [node name="nofurula7" parent="." instance=ExtResource("3_aa7gk")]
 position = Vector2(816, 440)
 scale = Vector2(0.3, 0.3)
+No = "n2n7"
 
 [node name="Cosa censurada5" parent="." instance=ExtResource("5_1jcdi")]
 position = Vector2(816, 440)
 scale = Vector2(0.11, 0.11)
+N = "n2c5"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(974, 1071)
@@ -242,6 +254,8 @@ editor_draw_limits = true
 
 [node name="portal" parent="." instance=ExtResource("7_ws34w")]
 position = Vector2(488, 96)
+Lv = "n2"
+Ruta = "res://diversificacion.tscn"
 
 [node name="portal2" parent="." instance=ExtResource("7_ws34w")]
 position = Vector2(1048, 1072)
@@ -260,6 +274,4 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
-[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
 [connection signal="body_entered" from="portal2" to="." method="_on_portal_2_body_entered"]

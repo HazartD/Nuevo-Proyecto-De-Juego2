@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@export var N:String
 const SPEED = 200
 var player:CharacterBody2D
 @onready var noera=[$Flota1,$Flota2,$Flota3,$Flota4,$Flota5]#porque iba a ser aondeva pero me di cuenta que estaba en el script del otro enemigo pensando que aun no lo habia borrado de aqui pero si

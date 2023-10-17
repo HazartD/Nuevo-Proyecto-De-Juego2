@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@export var N:String
 var player: CollisionObject2D=null
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 const SPEED = 100.0

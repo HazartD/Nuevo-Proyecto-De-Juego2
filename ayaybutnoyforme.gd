@@ -12,6 +12,6 @@ func _on_ay_aybutnoyformearea_body_entered(body):
 	if body is StaticBody2D:
 		queue_free()
 	if body is CharacterBody2D:
-		body.free()
+		Powahuptas.mate(body.N,body)
 		Powahuptas.matacionesasesinas+=1
 		queue_free()

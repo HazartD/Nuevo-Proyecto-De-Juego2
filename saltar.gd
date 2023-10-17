@@ -6,43 +6,33 @@ func vete():
 		$portal2.show()
 		$portal2.monitoring=true
 func _ready():
-	Powahuptas.cambio=false
 	$enemflota.player=$Mar
-	if Powahuptas.compl.has("saltos"):
-		for e in enem: e.free()
-		$StaticBody2D2/CollisionShape2D11.free()
-		$StaticBody2D2/Optimismo11.free()
-		$enemflota.free()
-		$Area2D.free()
-		$Area2D2.free()
+	Powahuptas.sacar(Powahuptas.compl,"saltos",[enem,$StaticBody2D2/CollisionShape2D11,$StaticBody2D2/Optimismo11,$Area2D2,$Area2D])
+#		$enemflota.free()
 	$Seminknuc2/Label.text=tr("tip1")
 	if Powahuptas.lv2ya =="vengosatando":
 		$Mar.position=Vector2(96,915)
 		$StaticBody2D2/Optimismo11.scale.x=0.001
-	if Powahuptas.N.has("N1"): $Seminknuc2.free()
-	if Powahuptas.N.has("N2"): $Seminknuc.free()
-	if Powahuptas.ende.has("src"):$"Cosa censurada".free()
-	if Powahuptas.ende.has("src2"):$"Cosa censurada2".free()
-	if Powahuptas.ende.has("src3"):$"Cosa censurada3".free()
-	if Powahuptas.ende.has("src4"):$"Cosa censurada4".free()
-	if Powahuptas.ende.has("src5"):$"Cosa censurada5".free()
-	if Powahuptas.consegbab.has("srn2"):$nofurula2.free()
-	if Powahuptas.consegbab.has("srn"):$nofurula.free()
-	if Powahuptas.puzlechos.has("sal"):$Area2D.free()
+	Powahuptas.sacar(Powahuptas.N,"N1",[$Seminknuc2])
+	Powahuptas.sacar(Powahuptas.N,"N2",[$Seminknuc])
+	Powahuptas.sacar(Powahuptas.ende,"src",[$"Cosa censurada"])
+	Powahuptas.sacar(Powahuptas.ende,"src2",[$"Cosa censurada2"])
+	Powahuptas.sacar(Powahuptas.ende,"src3",[$"Cosa censurada3"])
+	Powahuptas.sacar(Powahuptas.ende,"src4",[$"Cosa censurada4"])
+	Powahuptas.sacar(Powahuptas.ende,"src5",[$"Cosa censurada5"])
+	Powahuptas.sacar(Powahuptas.ende,"srf",[$enemflota])
+	Powahuptas.sacar(Powahuptas.consegbab,"srn",[$nofurula])
+	Powahuptas.sacar(Powahuptas.consegbab,"srn",[$nofurula])
+	Powahuptas.sacar(Powahuptas.puzlechos,"sal",[$Area2D])
 	
 	vete()
+	Powahuptas.cambio=false
 
 
 func _on_child_exiting_tree(node):
-	if node is CharacterBody2D: aqui+=1
 	if !Powahuptas.cambio:
-		if node.name == "Cosa censurada": Powahuptas.ende.append("src")
-		if node.name == "Cosa censurada2": Powahuptas.ende.append("src2")
-		if node.name == "Cosa censurada3": Powahuptas.ende.append("src3")
-		if node.name == "Cosa censurada4": Powahuptas.ende.append("src4")
-		if node.name == "Cosa censurada5": Powahuptas.ende.append("src5")
-		if node.name == "nofurula":Powahuptas.consegbab.append("srn")
-		if node.name == "nofurula2":Powahuptas.consegbab.append("srn2")
+		if node is CharacterBody2D: aqui+=1
+
 	
 func _process(_delta):
 	if $Mar: $Camera2D.position=$Mar.position
@@ -51,15 +41,6 @@ func _process(_delta):
 			$StaticBody2D2/CollisionShape2D11.free()
 			$StaticBody2D2/Optimismo11.free()
 			Powahuptas.compl.append("saltos")
-
-
-func _on_portal_body_entered(_body):
-	Powahuptas.lv2ya="salta"
-	Powahuptas.cambio=true
-	get_tree().change_scene_to_file("res://diversificacion.tscn")
-func _on_portal_2_body_entered(_body):
-	Powahuptas.cambio=true
-	get_tree().change_scene_to_file("res://saltos.tscn")
 
 
 func _on_seminknuc_body_entered(_body):
