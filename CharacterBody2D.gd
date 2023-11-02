@@ -30,24 +30,18 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if "tegoelpoderabsolutoymelapelas" in Powahuptas.powahuptas and Input.is_action_just_pressed("clip") and !"aafceq'aibfue'unoab" in Powahuptas.powahuptas:
-		$AyAybutnoyforme.play()
-		var disparito = AyAybutnoyforme.instantiate()
-		get_parent().add_child(disparito)
-		disparito.global_position = position
-		disparito.velocity = get_local_mouse_position()*delta *100
+		disparo(AyAybutnoyforme)
 	if "machacavergas" in Powahuptas.powahuptas and Input.is_action_just_pressed("evil_clip") and !"aafceq'aibfue'unoab" in Powahuptas.powahuptas:
-		$AyAybutnoyforme.play()
-		var bonba = trolo.instantiate()
-		get_parent().add_child(bonba)
-		bonba.global_position = position
-		bonba.velocity = get_local_mouse_position()*delta *100
+		disparo(trolo)
 	if Powahuptas.powahuptas.has("aafceq'aibfue'unoab") and Input.is_action_just_pressed("evil_clip") or Input.is_action_just_pressed("clip"):
-		$AyAybutnoyforme.play()
-		var chupala = pelemmela.instantiate()
-		get_parent().add_child(chupala)
-		chupala.global_position = position
-		chupala.velocity = get_local_mouse_position()*delta *100
+		disparo(pelemmela)
 	move_and_slide()
 func a_Y_a_Y():
 	$Mar.material = "res://MAR.tres"
 	queue_free()
+func disparo(que):
+	$AyAybutnoyforme.play()
+	var bonba = que.instantiate()
+	get_parent().add_child(bonba)
+	bonba.global_position = position
+	bonba.velocity = get_local_mouse_position()*delta *100
